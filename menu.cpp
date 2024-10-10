@@ -6,18 +6,34 @@
 using namespace std;
 
 string chooseBgColor() {
-    int choice;
-    cout << "Choose background color (Enter 0 to exit):" << endl;
-    cout << "1. Yellow\n2. Blue\n3. Red\n";
+    string choice;
+    cout << "We have only six colors: \n yellow \n green \n blue \n black \n white \n red";
+    cout << "\nEnter background color or 'exit' to quit: ";
     cin >> choice;
 
-    switch (choice) {
-    case 1: return "6";
-    case 2: return "1";
-    case 3: return "4";
-    case 0: return "exit";
-    default:
-        cout << "Invalid choice, please try again." << endl;
+    if (choice == "yellow") {
+        return "6";
+    }
+    else if (choice == "green") {
+		return "2";
+    }
+    else if (choice == "blue") {
+        return "1";
+    }
+    else if (choice == "black") {
+		return "0";
+	}
+    else if (choice == "white") {
+		return "8";
+    }
+    else if (choice == "red") {
+        return "4";
+    }
+    else if (choice == "exit") {
+        return "exit";
+    }
+    else {
+        cout << "Invalid color. Please check the spelling and try again." << endl;
         return "";
     }
 }
@@ -27,7 +43,7 @@ void Menu() {
 
     do {
         backgroundColor = chooseBgColor();
-        if (backgroundColor == "6" || backgroundColor == "1" || backgroundColor == "4") {
+        if (backgroundColor == "6" || backgroundColor == "1" || backgroundColor == "4" || backgroundColor == "0" || backgroundColor == "8" || backgroundColor == "2") {
             Theme customTheme("Custom", backgroundColor);
             customTheme.apply();
         }

@@ -9,5 +9,16 @@
     <ClCompile Include="main.cpp">
       <Filter>main</Filter>
     </ClCompile>
+    <ClCompile Include="menu.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="theme.h">
+      <Filter>main</Filter>
+    </ClInclude>
+    <ClInclude Include="menu.h">
+      <Filter>main</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
